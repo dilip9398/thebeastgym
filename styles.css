@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary: #de4f61;
+    --white: #fff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: "Kanit", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    transition: .2s linear;
+}
+
+body {
+    background: #080b10;
+    color: var(--white);
+}
+
+section {
+    padding: 5rem 7%;
+
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: .5rem;
+}
+
+.heading {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+
+}
+
+.btn {
+    font-size: 2rem;
+    margin-top: 1rem;
+    padding: .7rem 4rem;
+    display: inline-block;
+    background: #ff4d4d;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s 0.6s forwards;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #c75050;
+}
+
+/* Animation Keyframes */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* header */
+.logo .beast-gym img {
+    width: 10%;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 9%;
+
+}
+
+.header.active {
+    background: #040608;
+    padding: 2rem 9%;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.header .logo img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header .logo i {
+    padding-right: .5rem;
+    color: var(--primary);
+}
+
+.header .logo svg {
+    height: 3rem;
+    width: 4rem;
+
+
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--white);
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover {
+    color: var(--primary);
+}
+
+.header .navbar a.active,
+.header .navbar .a:hover {
+    color: var(--primary);
+}
+
+#menu {
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    color: var(--primary);
+    cursor: pointer;
+    display: none;
+
+}
+
+/* home */
+.home {
+    background: url(images/gym.png) no-repeat;
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.home .content {
+    max-width: 55rem;
+}
+
+.home .content h3 {
+    font-size: 7rem;
+    color: var(--white);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.home .content h3 span {
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 1rem 0;
+    line-height: 2;
+
+}
+
+/* End */
+
+
+/* about */
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+
+}
+
+.about .row .content span {
+    font-size: 3rem;
+    color: var(--primary);
+
+}
+
+.about .row .content h3 {
+    font-size: 2.5rem;
+    color: var(--white);
+    padding: 1rem 0;
+
+}
+
+.about .row .content p {
+    font-size: 1.4rem;
+    color: var(--white);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.about .row .content ul li {
+    font-size: 1.7rem;
+    color: var(--white);
+    padding-top: 1.5rem;
+
+}
+
+.about .row .content ul li i {
+    color: var(--primary);
+    padding: 1rem;
+
+}
+
+.about .row .content .btn {
+    margin: 1.4rem 15rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.about .row .content ul li span img {
+    width: auto;
+    height: 1.7rem;
+    padding-right: 1rem;
+}
+
+.about .row .image {
+    flex: 1 1 30rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    height: 100%;
+}
+
+/*End About */
+
+/* Services */
+
+.services .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    height: 30rem;
+    flex: 1 1 35rem;
+    border: 1rem solid var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.services .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.services .box-container .box .content {
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    color: white;
+    background-color: rgba(255, 255, 255, .9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+    transform: translateY(100%);
+    transition: all 0.5s;
+    bottom: 0;
+    left: 0;
+}
+
+
+.services .box-container .box:hover .content {
+    transform: translateY(5%);
+    height: 106%;
+
+}
+
+.services .box-container .box .content h3 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 1.2rem;
+}
+
+.services .box-container .box .content p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1.2rem 0;
+}
+
+.services .box-container .box .content .btn {
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+
+/* counter */
+.counter {
+    background: url(images/Red\ Mist.jpg) no-repeat;
+    opacity: .9;
+    filter: blur(1);
+    background-attachment: fixed;
+
+}
+.counter .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+.counter .box-container .box{
+    text-align: center;
+}
+.counter .box-container .box h3{
+    font-size: 5rem;
+    color: var(--white);
+}
+.counter .box-container .box p{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/* End counters */
+
+/* pricing */
+.pricing .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.pricing .box-container .box{
+    padding: 2rem;
+    text-align: center;
+    border:0.1rem solid rgba(255, 255, 255, .2);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+.pricing .box-container .box h3{
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding-top: 1rem;
+    color: var(--primary);
+}
+
+.pricing .box-container .box .price{
+    font-size: 6rem;
+    padding-top: 1rem;
+    font-weight: bolder;
+    
+}
+.pricing .box-container .box .price span{
+    font-size: 2rem;
+    font-weight: normal;
+}
+.pricing .box-container .box .month{
+    font-size: 2rem;
+    color: #666;
+}
+.pricing .box-container .box .list{
+    padding: 1rem 0;
+
+}
+.pricing .box-container .box .list p{
+    font-size: 1.8rem;
+    color: #ccc;
+    line-height: 2;
+}
+.pricing .box-container .box .list p i{
+    color: var(--primary);
+    padding-right: .5rem;
+}
+.pricing .box-container .box .list p i .fa-xmark{
+    color: var(--white);
+}
+
+.pricing .box-container .box a{
+    font-size: 1.5rem;
+    font-weight: normal;
+    padding: 1rem 1.4rem;
+}
+/* End */
+
+/* team */
+
+
+.team .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.team .box-container .box{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.team .box-container .box .image{
+    height: 40rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 100%;
+    box-shadow:var(--box-shadow)
+}
+.team .box-container .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(.5);
+    border: 5rem solid #080b10;
+    border-radius: 100%;
+}
+.team .box-container .box .content{
+    padding: 2rem;
+    padding-top: 0;
+}
+.team .box-container .box .content h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.team .box-container .box .content p{
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+}
+.team .box-container .box .content .share i{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border: .1rem solid var(--primary);
+    color: var(--primary);
+    font-size: 2rem;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+.team .box-container .box .content .share i:hover{
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* End team */
+
+/* Register */
+.register {
+    background: url(https://cdn.wallpapersafari.com/12/84/5w6Lzt.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+
+}
+.register form{
+    width: 85%;
+    margin: 0 auto;
+
+}
+.register form .inputbox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.register form .inputbox input,
+.register form  textarea{
+    height: 4rem;
+    width: 49%;
+    background: #222;
+    color: var(--white);
+    font-size: 2rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    border: none;
+
+}
+.register form .inputbox input:focus,
+.register form  textarea:focus{
+    background-color: #383838;
+}
+.register form textarea{
+    height: 20rem;
+    padding: 1rem;
+    width: 100%;
+    resize: none;
+}
+
+/* End register */
+
+/* footer */
